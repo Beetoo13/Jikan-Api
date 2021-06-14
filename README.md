@@ -2,7 +2,9 @@
 
 ## Live version
 
+```
 You can see a live version of the project on this link: https://vue-jikan-app.herokuapp.com/
+```
 
 ## Project setup
 ```
