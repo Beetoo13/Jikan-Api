@@ -2,10 +2,10 @@
   <div>
     <ul class="cartas">
       <li class="fade-in" v-for="value in animeResponse" :key="value.title">
-        <img v-bind:src="value.image_url" />
-        <h1>{{value.title}}</h1>
-        <h2>Number of episodes: {{value.episodes}}</h2>
-        <p>{{value.synopsis}}</p>
+        <img v-bind:src="value.images.jpg.image_url" alt="image" />
+        <h1>{{ value.title }}</h1>
+        <h2>Number of episodes: {{ value.episodes }}</h2>
+        <p>{{ value.synopsis }}</p>
       </li>
     </ul>
   </div>
@@ -14,7 +14,7 @@
 <script>
 export default {
   name: "Card",
-  props: ["animeResponse"]
+  props: ["animeResponse"],
 };
 </script>
 
@@ -51,8 +51,11 @@ li > h2 {
 }
 
 li > p {
-  padding-top: 20px;
+  padding-top: 10px;
   width: 90%;
+  height: 120px;
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 0.8rem;
   margin-left: 5%;
   text-align: justify;

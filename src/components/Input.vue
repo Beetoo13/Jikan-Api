@@ -34,9 +34,9 @@ export default {
       event.preventDefault();
       this.isLoading = true;
       axios
-        .get("https://api.jikan.moe/v4/anime?q={this.animeName}&limit=10")
+        .get(`https://api.jikan.moe/v4/anime?q=${this.animeName}&limit=10`)
         .then((response) => {
-          this.animeResponse = response.data.results;
+          this.animeResponse = response.data.data;
           console.log("AnimeResponse: ", this.animeResponse);
         });
       this.isLoading = false;
